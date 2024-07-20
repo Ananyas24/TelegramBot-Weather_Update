@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config';
 export declare class TelegramBotService implements OnModuleInit {
     private configService;
     private botToken;
+    private bot;
     private subscribers;
     constructor(configService: ConfigService);
     onModuleInit(): Promise<void>;
