@@ -4,7 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AdminService } from './admin.service';
 import { AdminController } from './admin.controller';
 import { GoogleStrategy } from './strategies/google.strategy';
-
+//admin page
 @Module({
   imports: [PassportModule, ConfigModule],
   providers: [AdminService, GoogleStrategy],
