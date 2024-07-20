@@ -1,6 +1,23 @@
+export interface User {
+    id: string;
+    blocked?: boolean;
+}
 export declare class AdminService {
-    googleLogin(req: any): "No user from google" | {
+    private settings;
+    private users;
+    getSettings(): {
+        weatherApiKey: string | undefined;
+        telegramBotToken: string | undefined;
+    };
+    updateSettings(newSettings: any): {
+        weatherApiKey: string | undefined;
+        telegramBotToken: string | undefined;
+    };
+    getUsers(): User[];
+    blockUser(userId: string): {
         message: string;
-        user: any;
+    };
+    deleteUser(userId: string): {
+        message: string;
     };
 }
